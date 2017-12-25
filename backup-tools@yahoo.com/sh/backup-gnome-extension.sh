@@ -30,6 +30,7 @@ do
 done
 
 CMD=`rm -rf ${PREF_INPUT_PATH}/gnome_shell_extensions_id.txt`
+CMD=`rm -rf ${PREF_INPUT_PATH}/gnome_shell_extensions_appfolder.txt`
 
 cnt=0
 
@@ -53,3 +54,4 @@ done
 
 # 备份 Gnome Shell Extensions 所有设定
 dconf dump /org/gnome/shell/extensions/ > ${PREF_INPUT_PATH}/gnome_shell_extensions_conf.txt
+dconf dump /org/gnome/desktop/app-folders/ > ${PREF_INPUT_PATH}/gnome_shell_extensions_appfolder.txt

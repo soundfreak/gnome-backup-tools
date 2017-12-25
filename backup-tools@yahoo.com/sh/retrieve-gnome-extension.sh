@@ -58,6 +58,7 @@ fi
 
 # 恢复 Gnome Shell Extensions 所有设定
 dconf load /org/gnome/shell/extensions/ < ${PREF_INPUT_PATH}/gnome_shell_extensions_conf.txt
+dconf load /org/gnome/desktop/app-folders/ < ${PREF_INPUT_PATH}/gnome_shell_extensions_appfolder.txt
 
 # restart gnome-shell
 # dbus-send --type=method_call --print-reply --dest=org.gnome.Shell /org/gnome/Shell org.gnome.Shell.Eval string:'global.reexec_self()'
